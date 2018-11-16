@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="cardstyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+	<script type="text/javascript" src="cardjava.js"></script>
+	<title> Study Tool </title>
+
+</head>
+
+<body>
+
+	<header>
+		<h1> FlashCards </h1>
+	</header>
+
+	<main>
+		<div id="new">
+			<h2> New Set: </h2>
+			<div id="newset">
+				<div id="inputs">
+					<p> Create new card: </p>
+					<form>
+						Front card text: <input type="text" id="frontin" value=""><br>
+						Back card text: <input type="text" id="backin" value=""><br>
+					</form>
+					<button id="addcard" onclick="forminput()"> Add Card </button> 
+				</div>
+				<div id="cardcounter">
+					<p> Number of cards in set: </p>
+					<p id="numcards"> 0 </p>
+				</div>
+				<button id="finishset" onclick="createset()"> Finish Set </button>
+			</div>
+		</div>
+
+		<div id="compiled">
+			<h2 id="settitle"></h2>
+			<div id="card" onclick="flipcard()">
+				<p id="answer"></p>
+				<p id="display"></p>
+			</div>
+			<p id="click"> (click card to flip over) </p>
+			<div id="checkans"> 
+				<p id="displayans"></p>
+				<p class="rightwrong" id="correct" onclick="rightans()">Correct</p> 
+				<p class="rightwrong" id="incorrect" onclick="wrongans()">Incorrect</p> 
+			</div>
+			<button id="prev" onclick="lastcard()"> < prev card </button>
+			<p id="cardnum"> Current Card #: <a id="cardnumi"></a> </p>
+			<button id="next" onclick="nextcard()"> next card > </button>
+			<p id="finish" onclick="finish()">Finished with this set?</p>
+		</div>
+
+
+	</main>
+
+	<footer>
+		<p id="copyright"> Mark Meinecke &copy;2018 </p>
+	</footer>
+
+</body>
+
+</html>
